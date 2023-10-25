@@ -36,5 +36,15 @@
     "A new verification link has been sent to the email address you provided during registration.": "Se ha enviado un nuevo enlace de verificación a la dirección de correo electrónico que proporcionaste durante el registro.",
     "Resend Verification Email": "Reenviar el email de Verificación",
     "Log Out": "Cerrar sesión",
-    "What type of account would you like to create?" : "¿Que tipo de cuenta desea crear?"
+    "What type of account would you like to create?" : "¿Que tipo de cuenta desea crear?",
+    "Profile": "Perfil",
+    "You're logged in!": "¡Estás Conectado!",
+    "Title": "Título",
+    "Company" :"Empresa",
+    "Monthly salary": "Salario Mensual",
+    "Category": "Categoría",
+    "Due date": "Fecha de vencimiento",
+    "Description": "Descripción",
+    "Image": "Imagen",
+    "Create": "Crear"
 }
