@@ -15,9 +15,23 @@
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
+        <div class="flex flex-col gap-2 justify-between mt-1">
+            <div class="flex items-center gap-6 justify-between mt-4">
+                <x-link 
+                :href="route('login')"
+                >
+                    Iniciar Sesión
+                </x-link> 
+                <x-link
+                :href="route('register')"
+                >
+                    Crear Cuenta
+                </x-link> 
+    
+            </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
+            <x-primary-button
+            class="text-center">
                 {{ __('Email Password Reset Link') }}
             </x-primary-button>
         </div>
