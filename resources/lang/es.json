@@ -47,5 +47,11 @@
     "Description": "Descripción",
     "Image": "Imagen",
     "Create": "Crear",
-    "The job was published successfully": "La vacante se ha publicado correctamente"
+    "The job was published successfully": "La vacante se ha publicado correctamente",
+    "Showing": "Mostrando",
+    "to": "a",
+    "of": "de",
+    "results": "resultados",
+    "Job": "Vacante",
+    "Job Edit": "Editar Vacante"
 }

@@ -13,13 +13,9 @@
                     <p class="pl-2">{{session('mensaje')}}</p>
                 </div>
             @endif
-
+                <livewire:mostrar-vacantes />
             <div >
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    Vacantes
-                </div>
-            </div>
+            
         </div>
     </div>
 </x-app-layout>
