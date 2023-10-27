@@ -63,17 +63,25 @@
         {{-- Input Imagen --}}
         <div>
             <x-input-label for="imagen" :value="__('Image')" />
-            <x-text-input id="imagen" class="block mt-1 w-full" type="file" wire:model="imagen"  
+            <x-text-input id="imagen" class="block mt-1 w-full" type="file" wire:model="imagen_nueva"  
                         accept="image/*"/>
             <div class="w-full my-5 flex justify-center">
-                @if ($imagen)
-                <img src="{{ $imagen->temporaryUrl() }}">
+                @if ($imagen_nueva)
+                <img src="{{ $imagen_nueva->temporaryUrl() }}">
             @endif
             </div>
-            @error('imagen') <livewire:mostrar-alerta :message="$message"/> @enderror
+            @error('imagen_nueva') <livewire:mostrar-alerta :message="$message"/> @enderror
         </div>
+        @if(!$imagen_nueva)
+        <div >
+            <x-input-label for="" :value="__('Actual Image')" />
+            <div class="w-full my-5 flex justify-center">
+                <img src="{{asset('storage/vacantes/' .$imagen)}}" alt="{{'Imagen Vacante' .$titulo}}">
+            </div>
+        </div>
+        @endif
         <x-primary-button class="mt-2 sm:mt-0">
-            {{ __('Create') }}
+            {{ __('Save') }}
         </x-primary-button>
 
     </form>
