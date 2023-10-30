@@ -14,8 +14,8 @@
                             hover:bg-slate-900 dark:text-gray-900 dark:bg-slate-400 dark:hover:bg-slate-100  ">Candidatos</a>
                 <a href="{{route('vacantes.edit', $vacante->id)}}" class="h-fit w-fit py-2 px-4 rounded-sm font-bold text-sm text-gray-50 bg-indigo-700 transition
                             hover:bg-slate-900 dark:text-gray-900 dark:bg-indigo-400 dark:hover:bg-slate-100  ">Editar</a>
-                <a href="#" class="h-fit w-fit py-2 px-4 rounded-sm font-bold text-sm text-gray-50 bg-pink-950 transition
-                            hover:bg-slate-900 dark:text-gray-900 dark:bg-red-400 dark:hover:bg-slate-100  ">Eliminar</a>
+                <button wire:click='$dispatch("alertaBorrarVacante",{vacante: {{$vacante->id}}})' href="#" class="h-fit w-fit py-2 px-4 rounded-sm font-bold text-sm text-gray-50 bg-pink-950 transition
+                            hover:bg-slate-900 dark:text-gray-900 dark:bg-red-400 dark:hover:bg-slate-100  " >Eliminar</button>   
             </div>
         </div>
     @empty
@@ -25,5 +25,10 @@
     @endforelse
         {{$vacantes->onEachSide(2)->links('pagination::tailwind')}}
 
-
+    @push('styles')
+        <link rel="stylesheet" href="{{ asset('css/dark.min.css') }}">
+    @endpush
 </div>
+
+
+
