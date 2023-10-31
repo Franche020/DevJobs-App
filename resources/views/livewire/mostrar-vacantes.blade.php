@@ -1,6 +1,6 @@
-<div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800">
+<div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 rounded-lg">
     @forelse ($vacantes as $vacante)
-        <div class="p-6 text-gray-900 border-b border-gray-300 flex gap-2 flex-col md:flex-row md:justify-between md:items-center
+        <div class="p-6 text-gray-900 border-b last:border-none border-gray-300 flex gap-2 flex-col md:flex-row md:justify-between md:items-center
                      dark:border-gray-700 dark:text-gray-50">
             <div class="space-y-4">
                 <a href="{{route('vacantes.show',$vacante)}}">

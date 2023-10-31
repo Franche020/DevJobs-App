@@ -15,6 +15,7 @@ class VacanteController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', Vacante::class);
         // Mostrar el dashboard con el indice de las vacantes publicadas por el usuario
         return view("/vacantes/index", [
 
@@ -27,7 +28,7 @@ class VacanteController extends Controller
     public function create()
     {
         //Creacion de vacantes
-
+        $this->authorize('viewAny', Vacante::class);
         return view("/vacantes/create");
     }
 

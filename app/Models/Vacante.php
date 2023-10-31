@@ -3,9 +3,10 @@
 namespace App\Models;
 
 use App\Models\Salario;
-
+use App\Models\Candidato;
 use App\Models\Categoria;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -32,5 +33,9 @@ class Vacante extends Model
     public function salario() :BelongsTo
     {
         return $this->belongsTo(Salario::class);
+    }
+    public function candidatos() :HasMany
+    {
+        return $this->hasMany(Candidato::class);
     }
 }

@@ -57,6 +57,7 @@
     "Create Jobs": "Crear Vacante",
     "Job Edit": "Editar Vacante",
     "Actual Image": "Imagen Actual",
-    "Save": "Guardar",
-    "The job was updated successfully": "La vacante se ha actualizado correctamente"
+    "Save": "Guardar",  
+    "The job was updated successfully": "La vacante se ha actualizado correctamente",
+    "Curriculum Vitae" : "Curriculum Vitae"
 }
