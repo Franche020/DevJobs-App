@@ -3,7 +3,7 @@
         <div class="p-6 text-gray-900 border-b border-gray-300 flex gap-2 flex-col md:flex-row md:justify-between md:items-center
                      dark:border-gray-700 dark:text-gray-50">
             <div class="space-y-4">
-                <a href="#">
+                <a href="{{route('vacantes.show',$vacante)}}">
                     <p class="text-xl font-bold">{{$vacante->titulo}}</p>
                 </a>
                 <p class="text-sm font-bold text-gray-700 dark:text-gray-200">{{$vacante->empresa}}</p>
