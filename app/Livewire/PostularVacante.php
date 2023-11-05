@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Vacante;
+use App\Notifications\NuevoCandidato;
 use Livewire\Component;
 use Livewire\Attributes\Rule;
 use Livewire\WithFileUploads;
@@ -24,6 +25,7 @@ class PostularVacante extends Component
     {
         // Valida la candidatura
         $datos = $this->validate();
+        $mail = $this->vacante->reclutador->notify(new NuevoCandidato($this->vacante->id, $this->vacante->titulo,auth()->user()->id));
 
         // Guardar el CV
         $cv = $this->cv->store('public/cv');

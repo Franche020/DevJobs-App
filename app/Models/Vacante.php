@@ -36,6 +36,12 @@ class Vacante extends Model
     }
     public function candidatos() :HasMany
     {
-        return $this->hasMany(Candidato::class);
+        return $this->hasMany(Candidato::class)->orderBy('created_at','DESC');
+    }
+
+    // Este codigo se sale de las convenciones para clarificar el rol concreto que el usuario ha de tener
+    public function reclutador() :BelongsTo
+    {   
+        return $this->belongsTo(User::class,'user_id');
     }
 }

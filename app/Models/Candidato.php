@@ -12,6 +12,12 @@ class Candidato extends Model
     protected $fillable = [
     'user_id',
     'vacante_id',
-    'CV'
+    'CV',
+    'vista'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

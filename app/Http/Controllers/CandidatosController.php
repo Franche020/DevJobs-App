@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vacante;
 use App\Models\Candidato;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 
-class CandidatoController extends Controller
+class CandidatosController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Vacante $vacante): View
     {
-        //
+        // Devuelve todos los candidatos
+        return view("candidatos.index", [
+            'vacante' => $vacante
+        ]);
     }
 
     /**
