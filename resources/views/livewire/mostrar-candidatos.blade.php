@@ -9,7 +9,7 @@
                         {{ $candidato->user->email }}</p>
                     <p class="text-sm font-medium text-gray-600 dark:text-gray-300">
                         Dia que se postuló: <span
-                            class="font-normal">{{ $candidato->user->created_at->diffForHumans() }}</span>
+                            class="font-normal">{{ $candidato->created_at->diffForHumans() }}</span>
                     </p>
                 </div>
                 <div class="flex flex-col gap-2 items-end">
